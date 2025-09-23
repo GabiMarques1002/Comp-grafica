@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2faff;
+    color: #333;
+  }
+  
+  h1 {
+    color: #007BFF;
+  }
+  
+  .screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .progress-bar {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .subjects button {
+    margin: 5px;
+  }
+  
+  .options button {
+    margin: 5px;
+    padding: 15px;
+    width: 100px;
+  }
+  
+  #next {
+    margin-top: 20px;
+  }
+  

@@ -1,258 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Celular com Escolha de Tarefas (Azul e Branco)</title>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    height: 100vh;
-    margin: 0;
-    background: #e6f0ff; /* azul bem clarinho para o fundo */
-    font-family: Arial, sans-serif;
-  }
-
-  /* Container dos celulares */
-  .celular {
-    width: 300px;
-    height: 600px;
-    background: #003d99; /* azul escuro */
-    border-radius: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    position: relative;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .tela {
-    width: 260px;
-    height: 520px;
-    background: white; /* branco */
-    margin: 40px 20px;
-    border-radius: 30px;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    color: #003d99; /* texto azul escuro */
-  }
-
-  .alto-falante {
-    width: 60px;
-    height: 8px;
-    background: #002966; /* azul mais escuro */
-    border-radius: 4px;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .botao-lateral {
-    width: 6px;
-    height: 80px;
-    background: #002966;
-    border-radius: 4px;
-    position: absolute;
-    right: -10px;
-    top: 150px;
-  }
-
-  /* Estilos login */
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .login-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .login-form input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1.5px solid #99b3ff;
-    border-radius: 6px;
-    color: #003d99;
-  }
-
-  .login-form input::placeholder {
-    color: #6699ff;
-  }
-
-  .login-form button {
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #0052cc; /* azul médio */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .login-form button:hover {
-    background-color: #003d99; /* azul escuro */
-  }
-
-  /* Página inicial - escolha de tarefas */
-  .pagina-inicial h2 {
-    margin-top: 0;
-    text-align: center;
-    color: #003d99;
-  }
-
-  .opcoes {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-  }
-
-  .opcao {
-    background-color: #0052cc; /* azul médio */
-    color: white;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .opcao:hover {
-    background-color: #003d99; /* azul escuro */
-  }
-
-  /* Atividade */
-  .atividade h3 {
-    margin-top: 0;
-    text-align: center;
-    color: #003d99;
-  }
-
-  .atividade p {
-    font-size: 15px;
-    margin: 20px 0;
-    text-align: justify;
-  }
-
-  .atividade button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 25px;
-    background-color: #0073e6; /* azul vibrante */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .atividade button:hover {
-    background-color: #004a99;
-  }
-
-  /* Esconde celulares que não estão ativos */
-  .celular.inativo {
-    display: none;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Educacional</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Tela 1: Login -->
-<div class="celular" id="tela-login">
-  <div class="alto-falante"></div>
-  <div class="tela login-form">
-    <h2>Login</h2>
-    <label for="usuario">Usuário</label>
-    <input type="text" id="usuario" placeholder="Digite seu usuário" />
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" placeholder="Digite sua senha" />
-    <button id="btn-login">Entrar</button>
-  </div>
-  <div class="botao-lateral"></div>
-</div>
-
-<!-- Tela 2: Página Inicial -->
-<div class="celular inativo" id="tela-inicial">
-  <div class="alto-falante"></div>
-  <div class="tela pagina-inicial">
-    <h2>Escolha a tarefa</h2>
-    <div class="opcoes">
-      <div class="opcao" id="btn-portugues">Português</div>
-      <div class="opcao" id="btn-matematica">Matemática</div>
+  <!-- Tela de Login -->
+  <section id="login" class="screen">
+    <h1>Bem-vindo ao App Educacional</h1>
+    <div class="login-form">
+      <input type="text" placeholder="Digite seu usuário">
+      <input type="password" placeholder="Digite sua senha">
+      <button>Login</button>
+      <p><a href="#">Criar conta</a></p>
     </div>
-  </div>
-  <div class="botao-lateral"></div>
-</div>
+  </section>
 
-<!-- Tela 3: Atividade -->
-<div class="celular inativo" id="tela-atividade">
-  <div class="alto-falante"></div>
-  <div class="tela atividade">
-    <h3 id="titulo-atividade">Atividade</h3>
-    <p id="descricao-atividade">Descrição da atividade vai aqui.</p>
-    <button id="btn-concluir">Concluir</button>
-  </div>
-  <div class="botao-lateral"></div>
-</div>
+  <!-- Tela Inicial com Progresso -->
+  <section id="home" class="screen hidden">
+    <h1>Olá, [Nome do Aluno]!</h1>
+    <div class="progress">
+      <p>Progresso: <span class="progress-bar" style="width: 60%;">60%</span></p>
+      <p>Matérias: Matemática, Português, Ciências, História</p>
+    </div>
+    <div class="subjects">
+      <button>Matemática</button>
+      <button>Português</button>
+      <button>História</button>
+      <button>Ciências</button>
+    </div>
+  </section>
 
-<script>
-  const telaLogin = document.getElementById('tela-login');
-  const telaInicial = document.getElementById('tela-inicial');
-  const telaAtividade = document.getElementById('tela-atividade');
+  <!-- Exercício Interativo -->
+  <section id="quiz" class="screen hidden">
+    <h1>Exercício: Matemática</h1>
+    <p>Qual é o resultado de 5 + 3?</p>
+    <div class="options">
+      <button>A) 7</button>
+      <button>B) 8</button>
+      <button>C) 9</button>
+      <button>D) 6</button>
+    </div>
+    <button id="next">Próxima questão</button>
+  </section>
 
-  const btnLogin = document.getElementById('btn-login');
-  const btnPortugues = document.getElementById('btn-portugues');
-  const btnMatematica = document.getElementById('btn-matematica');
-  const btnConcluir = document.getElementById('btn-concluir');
-
-  const tituloAtividade = document.getElementById('titulo-atividade');
-  const descricaoAtividade = document.getElementById('descricao-atividade');
-
-  btnLogin.addEventListener('click', () => {
-    const usuario = document.getElementById('usuario').value.trim();
-    const senha = document.getElementById('senha').value.trim();
-
-    if (usuario && senha) {
-      telaLogin.classList.add('inativo');
-      telaInicial.classList.remove('inativo');
-    } else {
-      alert('Por favor, preencha usuário e senha.');
-    }
-  });
-
-  btnPortugues.addEventListener('click', () => {
-    tituloAtividade.textContent = 'Atividade de Português';
-    descricaoAtividade.textContent = 'Leia o texto abaixo e responda às perguntas relacionadas à interpretação e gramática.';
-    telaInicial.classList.add('inativo');
-    telaAtividade.classList.remove('inativo');
-  });
-
-  btnMatematica.addEventListener('click', () => {
-    tituloAtividade.textContent = 'Atividade de Matemática';
-    descricaoAtividade.textContent = 'Resolva os problemas de matemática envolvendo operações básicas e raciocínio lógico.';
-    telaInicial.classList.add('inativo');
-    telaAtividade.classList.remove('inativo');
-  });
-
-  btnConcluir.addEventListener('click', () => {
-    telaAtividade.classList.add('inativo');
-    telaInicial.classList.remove('inativo');
-  });
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
