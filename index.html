@@ -8,44 +8,44 @@
 </head>
 <body>
   <!-- Tela de Login -->
-  <section id="login" class="screen">
+  <section id="login" class="tela">
     <h1>Português e Matemática</h1>
     <p>Um aplicativo para aprendizado</p>
-    <div class="login-form">
+    <div class="formulario-login">
       <img src="./estudante.jpg" alt="foto de perfil">
       <p>Faça seu Login</p>
       <input type="text" placeholder="Digite seu usuário">
       <input type="password" placeholder="Digite sua senha">
-      <button>Login</button>
+      <button id="botao-login">Login</button>
       <p><a href="#">Criar conta</a></p>
     </div>
   </section>
 
   <!-- Tela Inicial com Progresso -->
-  <section id="home" class="screen hidden">
+  <section id="inicio" class="tela oculta">
     <h1>Olá, seja bem-vindo!</h1>
     <p>O que você deseja aprender</p>
     
-    <div class="progress">
-      <p>Progresso: <span class="progress-bar" style="width: 60%;">60%</span></p>
+    <div class="progresso">
+      <p>Progresso: <span class="barra-progresso" style="width: 60%;">60%</span></p>
     </div>
-    <div class="subjects">
-      <button>Matemática    ></button>
-      <button>Português     ></button>
+    <div class="materias">
+      <button id="botao-matematica">Matemática ></button>
+      <button id="botao-portugues">Português ></button>
     </div>
   </section>
 
   <!-- Exercício Interativo -->
-  <section id="quiz" class="screen hidden">
-    <h1>Exercício: Matemática</h1>
-    <p>Qual é o resultado de 5 + 3?</p>
-    <div class="options">
+  <section id="exercicio" class="tela oculta">
+    <h1 id="titulo-exercicio">Exercício: Matemática</h1>
+    <p id="pergunta-exercicio">Qual é o resultado de 5 + 3?</p>
+    <div class="opcoes">
       <button>A) 7</button>
       <button>B) 8</button>
       <button>C) 9</button>
       <button>D) 6</button>
     </div>
-    <button id="next">Próxima questão</button>
+    <button id="proximo">Próxima questão</button>
   </section>
 
   <script src="app.js"></script>
