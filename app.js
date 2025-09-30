@@ -34,6 +34,12 @@ document.querySelector('#botao-portugues').addEventListener('click', () => {
   opcoes[3].textContent = 'D) Cãs';
 });
 
+// Botão Voltar - volta para a tela inicial
+document.querySelector('#voltar').addEventListener('click', () => {
+  document.getElementById('exercicio').classList.add('oculta');
+  document.getElementById('inicio').classList.remove('oculta');
+});
+
 // Próxima questão - muda para uma nova pergunta da mesma matéria
 document.querySelector('#proximo').addEventListener('click', () => {
   const titulo = document.getElementById('titulo-exercicio').textContent;
