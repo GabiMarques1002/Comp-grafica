@@ -184,14 +184,14 @@
 }
 
 #voltar {
-  background-color: #6c757d;
+  background-color: #007BFF;
   padding: 10px 15px;
   flex: 1;
   margin-top: 0;
 }
 
 #voltar:hover {
-  background-color: #5a6268;
+  background-color: #0056b3;
 }
 
 #proximo {
@@ -244,6 +244,4 @@
   
   #next {
     margin-top: 20px;
-  }
-  
   }
