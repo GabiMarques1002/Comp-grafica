@@ -169,7 +169,29 @@
   button:hover {
     background-color: #0056b3;
   }
-  
+
+.botoes-navegacao {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#voltar {
+  background-color: #6c757d;
+  padding: 10px 20px;
+}
+
+#voltar:hover {
+  background-color: #5a6268;
+}
+
+#proximo {
+  margin-top: 0;
+  padding: 10px 20px;
+}
+
   input {
     padding: 10px;
     margin: 10px;
